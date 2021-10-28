@@ -1,0 +1,21 @@
+<form (ngSubmit)="addTodo(taskForm)" #taskForm="ngForm">
+    <div class="input-group mb-3">
+        <input
+            type="text"
+            name="inputTodo"
+            placeholder="Enter todo..."
+            ngModel
+            #inputTodo="ngModel"
+            required
+        />
+        <input
+            type="submit"
+            value="submit"
+            class="btn btn-primary"
+            [disabled]="!taskForm.form.valid"
+        />
+    </div>
+    <div [hidden]="inputTodo.valid || inputTodo.pristine" style="color: red;">
+        Todo name should be written!
+    </div>
+</form>

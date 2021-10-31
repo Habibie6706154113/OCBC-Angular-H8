@@ -1,0 +1,22 @@
+<div>
+  <h1>Fun fact About Countries</h1>
+  <div>
+    <button class="navBtn" (click)="goToHome()">Go Back to Homepage</button>
+    <button class="navBtn" (click)="goToAll()">List of all Countries</button>
+  </div>
+
+  <app-home 
+    (showCountryDetailEvent)="homeToDetails($event)"
+    *ngIf="isHome" 
+    [data]="countries">
+  </app-home>
+  <app-all-countries
+    (showCountryDetailEvent)="allToDetails($event)"
+    *ngIf="isAll" 
+    [data]="countries"></app-all-countries>
+  <app-country-detail
+    (goBackEventHandler)="goBack($event)"
+    *ngIf="isDetail" 
+    [data]="detailCountry" 
+    [isFromHome]="isFromHome"></app-country-detail>
+</div>

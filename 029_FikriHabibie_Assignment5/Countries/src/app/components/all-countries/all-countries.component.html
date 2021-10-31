@@ -1,0 +1,9 @@
+<h2>List of All Countries in Our Database</h2>
+
+<button
+    *ngFor="let country of data"
+    class="bigBtn"
+    (click)="showCountryDetails(country)">
+    <h5><strong>{{country.name}}</strong></h5>
+    <div>{{country.capital}}</div>
+</button>

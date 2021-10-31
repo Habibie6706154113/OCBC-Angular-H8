@@ -1,0 +1,35 @@
+<h2>Three Most Populated Countries</h2>
+
+<div>
+    <button 
+        *ngFor="let populate of mostPopulate" 
+        class="bigBtn"
+        (click)="showCountryDetails(populate)">
+        <h5><strong>{{populate.name}}</strong></h5>
+        <div>{{populate.population | number}} People</div>
+    </button>
+</div>
+
+<h2>Three Largest Countries (Area)</h2>
+
+<div>
+    <button
+        *ngFor="let area of largest" 
+        class="bigBtn"
+        (click)="showCountryDetails(area)">
+        <h5><strong>{{area.name}}</strong></h5>
+        <div>{{area.area | number}} km<sup>2</sup></div>
+    </button>
+</div>
+
+<h2>Three Biggest GDP Countries (USD)</h2>
+
+<div>
+    <button
+        *ngFor="let GDP of biggestGDP" 
+        class="bigBtn"
+        (click)="showCountryDetails(GDP)">
+        <h5><strong>{{GDP.name}}</strong></h5>
+        <div>{{GDP.gdp | number}} USD</div>
+    </button>
+</div>

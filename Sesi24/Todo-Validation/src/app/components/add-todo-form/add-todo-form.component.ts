@@ -11,8 +11,6 @@ export class AddTodoFormComponent implements OnInit {
 
   @Output() newTodoEvent = new EventEmitter<Todo>();
 
-  inputTodo:string = "";
-
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,16 @@
+*{
+    text-align: center;
+}
+
+h1{
+    color: darkgrey;
+}
+
+.navBtn{
+    margin-left: 0.50em;
+    margin-right: 0.50em;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-color: transparent;
+}

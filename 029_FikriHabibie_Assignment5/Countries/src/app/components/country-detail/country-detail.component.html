@@ -1,0 +1,30 @@
+<table>
+    <tbody>
+        <tr>
+            <h2>{{data.name}}</h2>
+        </tr>
+        <tr>
+            <th style="color: darkturquoise;">Capital</th>
+            <td>{{data.capital}}</td>
+        </tr>
+        <tr>
+            <th style="color: darkturquoise;">Area</th>
+            <td>{{data.area | number}} km<sup>2</sup></td>
+        </tr>
+        <tr>
+            <th style="color: darkturquoise;">Population</th>
+            <td>{{data.population | number}}</td>
+        </tr>
+        <tr>
+            <th style="color: darkturquoise;">GDP</th>
+            <td>{{data.gdp | number}} USD</td>
+        </tr>
+        <tr>
+            <th style="color: darkturquoise;">Currency</th>
+            <td>{{data.currency}}</td>
+        </tr>
+        <tr>
+            <button class="backBtn" (click)="goBack()">Go Back</button>
+        </tr>
+    </tbody>
+</table>

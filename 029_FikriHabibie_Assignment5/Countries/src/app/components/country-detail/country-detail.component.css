@@ -1,0 +1,17 @@
+.backBtn{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-color: transparent;
+    border-radius: 50%;
+    margin-top: 2em;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*{
+    text-align: left;
+}

@@ -1,0 +1,13 @@
+.bigBtn {
+    height: 8em;
+    width: 20%;
+    background-color: green; 
+    color: aliceblue;
+    cursor: pointer;
+    margin: 10px;
+    border-color: transparent;
+}
+div{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

@@ -10,12 +10,15 @@
         />
         <input
             type="submit"
-            value="submit"
+            value="addTodo"
             class="btn btn-primary"
-            [disabled]="!taskForm.form.valid"
+            [disabled]="!taskForm.form.valid || inputTodo.value.length < 5"
         />
     </div>
     <div [hidden]="inputTodo.valid || inputTodo.pristine" style="color: red;">
         Todo name should be written!
+    </div>
+    <div [hidden]="!inputTodo.valid || inputTodo.value.length >= 5 || inputTodo.pristine" style="color: red;">
+        Todo name minimal 5 Character!
     </div>
 </form>

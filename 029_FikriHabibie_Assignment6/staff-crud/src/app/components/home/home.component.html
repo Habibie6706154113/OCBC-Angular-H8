@@ -1,0 +1,23 @@
+<button [routerLink]="['/addstaff']" class="btn btn-success">Add Employee</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{employee.firstName}} {{employee.lastName}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.role}}</td>
+            <td>{{employee.title}}</td>
+            <td><button [routerLink]="['/editstaff', employee.id]" class="btn btn-primary">Edit</button> &nbsp;
+            <button class="btn btn-danger" (click)="deleteStaff(employee.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

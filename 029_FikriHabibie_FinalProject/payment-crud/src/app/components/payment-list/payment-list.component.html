@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Card Owner</th>
+            <th scope="col">Card Number</th>
+            <th scope="col">Expiration Date</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of payments">
+            <td>{{payment.cardOwnerName}}</td>
+            <td>{{payment.cardNumber}}</td>
+            <td>{{payment.expirationDate}}</td>
+            <td><button class="btn btn-outline-danger" (click)="deleteStaff(payment.paymentDetailId)"><i class="bi bi-trash">Delete</i></button></td>
+            <td><button [routerLink]="['/editpayment', payment.paymentDetailId]" class="btn btn-outline-success"><i class="bi bi-pencil">Edit</i></button></td>
+        </tr>
+    </tbody>
+</table>

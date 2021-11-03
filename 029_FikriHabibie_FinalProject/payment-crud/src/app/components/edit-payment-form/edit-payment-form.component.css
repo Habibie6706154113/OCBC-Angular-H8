@@ -1,0 +1,22 @@
+form{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+button{
+    margin-top: 3%;
+    width: 100%;
+}
+
+label, input{
+    margin-bottom: 1%;
+}
+
+h1{
+    text-align: center;
+    background-color: lightskyblue;
+    padding: 0.5%;
+    font-family: Verdana, sans-serif;
+}

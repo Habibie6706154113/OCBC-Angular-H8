@@ -1,0 +1,33 @@
+<form [formGroup] ="addform.inputData" (ngSubmit)="addPayment()">
+    <div class="form-group">
+        <label>CARD OWNER NAME : </label>
+        <input placeholder="Full Name" type="text" class="form-control" formControlName="cardownername" name="cardownername" id="cardownername" required>
+        <span style="color: red;" *ngIf="Cardownername && Cardownername.touched && Cardownername.invalid">
+            Input Card Owner Name Min 3 Characters</span>
+    </div>
+    <div class="form-group">
+        <label>CARD NUMBER : </label>
+        <input placeholder="16 Digit Card Number" type="text" class="form-control" formControlName="cardnumber" name="cardnumber" id="cardnumber" required>
+        <span style="color: red;" *ngIf="Cardnumber && Cardnumber.touched && Cardnumber.invalid">
+            Input Card Number Only 16 Digits</span>
+    </div>
+    <Div>
+        <td>
+            <div class="form-group">
+                <label>SECURITY CODE : </label>
+                <input placeholder="Security Code" type="password" class="form-control" formControlName="securitycode" name="securitycode" id="securitycode" required>
+                <span style="color: red;" *ngIf="Securitycode && Securitycode.touched && Securitycode.invalid">
+                    Input Min 6 Characters</span>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>VALID THROUGH : </label>
+                <input placeholder="MM/YY" type="date" class="form-control" formControlName="expirationdate" name="expirationdate" id="expirationdate" required>
+                <span style="color: red;" *ngIf="Expirationdate && Expirationdate.touched && Expirationdate.invalid">
+                    Input Expiration Date Invalid</span>
+            </div>
+        </td>
+    </Div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

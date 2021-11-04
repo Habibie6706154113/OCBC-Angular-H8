@@ -1,12 +1,11 @@
 table{
-    margin-left: 70%;
+    margin-left: 60%;
     text-align: center;
     margin-top: 5%;
-    width: 100%;
 }
 
 th{
-    background-color: lightsteelblue;
+    background-color: #AAE2F8;
     padding: 15px;
 }
 

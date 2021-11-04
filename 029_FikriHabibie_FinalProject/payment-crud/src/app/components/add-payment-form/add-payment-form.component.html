@@ -17,7 +17,7 @@
                 <label>SECURITY CODE : </label>
                 <input placeholder="Security Code" type="password" class="form-control" formControlName="securitycode" name="securitycode" id="securitycode" required>
                 <span style="color: red;" *ngIf="Securitycode && Securitycode.touched && Securitycode.invalid">
-                    Input Min 6 Characters</span>
+                    Input Only 3 Digits</span>
             </div>
         </td>
         <td>
@@ -29,5 +29,5 @@
             </div>
         </td>
     </Div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button [disabled]="addform.inputData.invalid" type="submit" class="btn btn-primary">Submit</button>
 </form>

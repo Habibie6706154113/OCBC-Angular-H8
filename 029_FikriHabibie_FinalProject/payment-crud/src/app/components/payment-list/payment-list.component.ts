@@ -24,8 +24,12 @@ export class PaymentListComponent implements OnInit {
   }
 
   deleteStaff(id: number){
-    this.dataPayment.deleteData(id).subscribe(() => {
-      this.setData()
-    })
+    if(confirm("Are you sure to delete "+name)) {
+      this.dataPayment.deleteData(id).subscribe(() => {
+        this.setData()
+      })
+    } else{
+      console.log("Cancel");
+    }
   }
 }

@@ -13,8 +13,8 @@
             <td>{{payment.cardOwnerName}}</td>
             <td>{{payment.cardNumber}}</td>
             <td>{{payment.expirationDate}}</td>
-            <td><button class="btn btn-outline-danger" (click)="deleteStaff(payment.paymentDetailId)"><i class="bi bi-trash">Delete</i></button></td>
-            <td><button [routerLink]="['/editpayment', payment.paymentDetailId]" class="btn btn-outline-success"><i class="bi bi-pencil">Edit</i></button></td>
+            <td><button class="btn btn-outline-danger bi bi-trash" (click)="deleteStaff(payment.paymentDetailId)"></button></td>
+            <td><button [routerLink]="['/editpayment', payment.paymentDetailId]" class="btn btn-outline-success bi bi-pencil"></button></td>
         </tr>
     </tbody>
 </table>

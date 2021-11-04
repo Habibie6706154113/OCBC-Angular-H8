@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditPaymentFormComponent } from './components/edit-payment-form/edit-payment-form.component';
 import { HomeComponent } from './components/home/home.component';
+import { NoPageFoundComponent } from './components/no-page-found/no-page-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/home/home.component';
     PaymentListComponent,
     AddPaymentFormComponent,
     EditPaymentFormComponent,
-    HomeComponent
+    HomeComponent,
+    NoPageFoundComponent
   ],
   imports: [
     BrowserModule,
